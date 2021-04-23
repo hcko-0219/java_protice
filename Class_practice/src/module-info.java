@@ -1,0 +1,2 @@
+module Class_practice {
+}
