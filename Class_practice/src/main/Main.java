@@ -1,7 +1,9 @@
 package main;
 
+import practice.PCProduct;
 import practice.Product;
 import practice.ProductList;
+import practice.PCProductList;
 
 public class Main {
 
@@ -28,8 +30,23 @@ public class Main {
 		if (searched == null) {
 			System.out.println("The product is null");
 		} else {
-			System.out.printf("id = %s\nbrand = %s",searched.get_product_id(),searched.get_product_brand());
+			System.out.printf("id = %s\nbrand = %s\n\n",searched.get_product_id(),searched.get_product_brand());
 		}
+		
+		PCProduct new_asus = new PCProduct("123-456", "asus", 12, "850 W");
+		PCProduct new_msi = new PCProduct("456-789", "msi", 8, "750 W");
+		PCProduct new_amd = new PCProduct("741-852", "amd", 4, "650 W");
+		PCProduct new_intel = new PCProduct("852-963", "intel", 2, "550 W");
+		
+		PCProductList list_two = new PCProductList();
+		
+		list_two.add_productlist(new_asus);
+		list_two.add_productlist(new_msi);
+		list_two.add_productlist(new_amd);
+		list_two.add_productlist(new_intel);
+		
+		list_two.all_product_information();
+				
 		return;
 	}
 
