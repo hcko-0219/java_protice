@@ -1,7 +1,7 @@
 package main;
 import LinkedList.*;
 
-public class main {
+public class Main {
 	
 	public static void printNode(LinkedNode h) {
 		if (h==null) {
