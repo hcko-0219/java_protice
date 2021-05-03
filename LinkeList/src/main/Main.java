@@ -20,32 +20,19 @@ public class Main {
 			a_list.addNode(tmp);
 		}
 		
-		a_list.show();
+		LinkedNode a = new LinkedNode(11);
+		LinkedNode b = new LinkedNode(12);
+		LinkedNode c = new LinkedNode(13);
 		
-		a_list.delNode(100);
-		a_list.delNode(10);
-		a_list.delNode(-1);
-		a_list.delNode(3);
-		
-		a_list.show();
-		a_list.delNode(0);
-		a_list.show();
-
-		a_list.delNode(8);
-		a_list.show();		
-		
-		LinkedNode h = a_list.getNode(0);
-		printNode(h);
-		h = a_list.getNode(-1);
-		printNode(h);
-		h = a_list.getNode(100);
-		printNode(h);
-		h = a_list.getNode(5);
-		printNode(h);
-		h = a_list.getNode(7);
-		printNode(h);
+		a_list.addNode(a);
+		a_list.addNode(b);
+		a_list.addNode(c);
 		
 		a_list.show();
+		a_list.delNextNode(c);		
+		a_list.show();
+		System.out.printf("%d",a_list.getNodeposition(11));
+		
 		return;
 	}
 }

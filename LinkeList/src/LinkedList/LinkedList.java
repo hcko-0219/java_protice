@@ -33,6 +33,20 @@ public class LinkedList {
 		}
 	}
 	
+	public void delNextNode(LinkedNode node) {
+		if (node.getNextnode() != null) {
+			if (node.getNextnode().getNextnode() != null) {
+				node.setNextnode(node.getNextnode().getNextnode());
+				index--;
+			} else {
+				node.setNextnode(null);
+				index--;
+			}
+		} else {
+			System.out.printf("The node is tail\n" );
+		}
+	}
+	
 	public LinkedNode getNode(int number) {
 		LinkedNode curr_node = head;
 		if (number > index || number < 0) {
@@ -44,6 +58,19 @@ public class LinkedList {
 			return curr_node;
 		}
 	}
+	
+	public int getNodeposition(int number) {
+		LinkedNode curr_node = head;
+		for (int i=0; i<index; ++i) {
+			if (curr_node.getNodenumber() == number) {
+				return (i+1);
+			} else {
+				curr_node = curr_node.getNextnode();
+			}
+		}
+		return 0;
+	}
+		
 	
 	public void show() {
 		LinkedNode curr_node = head;
