@@ -8,21 +8,19 @@ public class main {
 		
 		Queue a_list = new Queue();
 		
-		LinkedNode a = new LinkedNode(11);
-		LinkedNode b = new LinkedNode(12);
-		LinkedNode c = new LinkedNode(13);
-		
-		a_list.pushNode(a);
-		a_list.pushNode(b);
-		a_list.pushNode(c);
-		
-		a_list.show();
-		a_list.popNode();
-		a_list.show();
-		a_list.popNode();
-		a_list.show();
-		a_list.popNode();
-		a_list.show();
+		for (int i=0; i<20; ++i) {
+			LinkedNode tmp = new LinkedNode(i);
+			a_list.pushNode(tmp);
+			tmp = new LinkedNode(i+1);
+			a_list.pushNode(tmp);
+			tmp = new LinkedNode(i+2);
+			a_list.pushNode(tmp);
+			
+			a_list.show();
+			a_list.popNode();
+			a_list.popNode();
+			a_list.show();			
+		}
 	}
 
 }
